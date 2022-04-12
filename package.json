@@ -25,9 +25,7 @@
 		"lint": "eslint --ext .ts .",
 		"release": "yarn build && standard-version && git push --follow-tags && npm publish"
 	},
-	"dependencies": {
-		"fs": "^0.0.1-security"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@types/node": "^17.0.23",
 		"siroc": "^0.16.0",

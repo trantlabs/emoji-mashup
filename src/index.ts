@@ -101,12 +101,10 @@ const bases = {
 };
 
 function importFile(path: string) {
-	if (typeof window === "undefined") {
-		// Import File on Node.js using File System
+	try {
 		return readFileSync(__dirname + "/" + path, "utf8").toString();
-	} else {
-		// Import file on Browser
-		return require(path);
+	} catch (error) {
+		return "";
 	}
 }
 
@@ -114,17 +112,17 @@ export function createCustomEmoji({ base, mouth, eyes, special }: { base: string
 	if (!base) throw new Error("No base emoji provided!");
 
 	// Format Emojis to Code
-	base = base.codePointAt(0)!.toString(16);
 	mouth = (mouth || base).codePointAt(0)!.toString(16);
 	eyes = (eyes || base).codePointAt(0)!.toString(16);
 	special = (special || base).codePointAt(0)!.toString(16);
+	base = base.codePointAt(0)!.toString(16);
 
 	// @ts-ignore
 	var baseName = bases[base];
 
 	// Import needed SVG Texts
-	var eyesFile = importFile(`./data/eyes/${eyes}.svg`);
 	var baseFile = importFile(`./data/base/${baseName ? "shared/" + baseName : base}.svg`);
+	var eyesFile = importFile(`./data/eyes/${eyes}.svg`);
 	var mouthFile = importFile(`./data/mouth/${mouth}.svg`);
 	var specialFile = importFile(`./data/special/${special}.svg`);
 
