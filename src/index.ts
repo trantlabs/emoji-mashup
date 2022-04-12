@@ -6,6 +6,7 @@ const bases = {
 	"1f60a": "blush",
 	"1f608": "imp",
 	"1f47f": "imp",
+	"1f383": "pumpkin",
 	"1f630": "pale",
 	"1f628": "pale",
 	"1f92c": "red",
