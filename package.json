@@ -21,7 +21,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "yarn compromize && siroc build",
+		"build": "siroc build",
 		"compromize": "svgo -f ./src/data/base -o ./src/data/base && svgo -f ./src/data/base/shared -o ./src/data/base/shared && svgo -f ./src/data/mouth -o ./src/data/mouth && svgo -f ./src/data/eyes -o ./src/data/eyes",
 		"lint": "eslint --ext .ts .",
 		"release": "yarn build && standard-version && git push --follow-tags && npm publish"
