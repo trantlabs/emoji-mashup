@@ -1,10 +1,10 @@
 {
 	"name": "emoji-mashup",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Easily create & mashup custom emojis ♻️🥴",
-	"license": "MIT",
 	"homepage": "https://github.com/trantlabs/emoji-mashup",
 	"repository": "https://github.com/trantlabs/emoji-mashup.git",
+	"license": "MIT",
 	"author": "Conner Luka Bachmann <github@conner-bachmann.de> && Flam3rBoy <34555296+Flam3rboy@users.noreply.github.com>",
 	"contributors": [
 		"Intevel <github@conner-bachmann.de>",
