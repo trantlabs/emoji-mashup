@@ -104,7 +104,7 @@ function importFile(path: string) {
 	try {
 		return readFileSync(__dirname + "/" + path, "utf8").toString();
 	} catch (error) {
-		return "";
+		throw error;
 	}
 }
 
@@ -118,13 +118,13 @@ export function createCustomEmoji({ base, mouth, eyes, special }: { base: string
 	base = base.codePointAt(0)!.toString(16);
 
 	// @ts-ignore
-	var baseName = bases[base];
+	let baseName = bases[base];
 
 	// Import needed SVG Texts
-	var baseFile = importFile(`./data/base/${baseName ? "shared/" + baseName : base}.svg`);
-	var eyesFile = importFile(`./data/eyes/${eyes}.svg`);
-	var mouthFile = importFile(`./data/mouth/${mouth}.svg`);
-	var specialFile = importFile(`./data/special/${special}.svg`);
+	let baseFile = importFile(`./data/base/${baseName ? "shared/" + baseName : base}.svg`);
+	let eyesFile = importFile(`./data/eyes/${eyes}.svg`);
+	let mouthFile = importFile(`./data/mouth/${mouth}.svg`);
+	let specialFile = importFile(`./data/special/${special}.svg`);
 
 	// Replace XML Tags with RegEx
 	mouthFile = mouthFile.replace(/<\?xml.+>/, "");
