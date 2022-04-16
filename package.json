@@ -31,6 +31,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@types/node": "^17.0.23",
+		"eslint": "^8.13.0",
 		"siroc": "^0.16.0",
 		"standard-version": "^9.3.2",
 		"svgo": "^2.8.0",
