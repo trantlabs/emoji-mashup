@@ -37,7 +37,7 @@ var emojiCombined = createCustomEmoji(newEmoji);
 
 ## License
 
-Published under MIT - Made with 💚
+Published under MIT - Made with 💚  by TrantLabs
 
 <!-- Badges -->
 
