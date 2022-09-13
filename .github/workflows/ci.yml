@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [12]
+        node: [16]
 
     steps:
       - uses: actions/setup-node@v1
@@ -37,5 +37,11 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
 
+#       - name: Lint
+#         run: yarn lint
+
       - name: Build
         run: yarn build
+      
+      - name: Test
+        run: yarn test
